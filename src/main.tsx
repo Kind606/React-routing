@@ -14,7 +14,7 @@ createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route path="/" element={<MediaPlayerLayout />}>
           <Route index element={<ForYouPage />}></Route>
-          <Route path="artist" element={<ArtistPage />}></Route>
+          <Route path="artists/:slug/:id" element={<ArtistPage />}></Route>
           <Route path="album" index element={<AlbumPage />}></Route>
           <Route path="radio" index element={<RadioPage />}></Route>
           <Route path="*" index element={<NotFoundPage />}></Route>

@@ -9,26 +9,26 @@ export default function ForYouPage() {
       <section className="overflow-auto">
         <div className="flex gap-2">
           {mockedArtrist.map((artist) => (
-            <ArtistCard titel={artist.name} imageUrl={artist.imageUrl} />
+            <ArtistCard artist={artist} />
           ))}
         </div>
       </section>
       <section>
         <h2 className="text-2xl">Albums and signels</h2>
         <div className="flex gap-2">
-          <Link to="artist">Album 1</Link>
-          <Link to="artist">Album 2</Link>
-          <Link to="artist">Album 3</Link>
-          <Link to="artist">Album 4</Link>
+          <Link to="album">Album 1</Link>
+          <Link to="album">Album 2</Link>
+          <Link to="album">Album 3</Link>
+          <Link to="album">Album 4</Link>
         </div>
       </section>
       <section>
         <h2 className="text-2xl">Radio Station</h2>
         <div className="flex gap-2">
-          <Link to="artist">Radio 1</Link>
-          <Link to="artist">Radio 2</Link>
-          <Link to="artist">Radio 3</Link>
-          <Link to="artist">Radio 4</Link>
+          <Link to="radio">Radio 1</Link>
+          <Link to="radio">Radio 2</Link>
+          <Link to="radio">Radio 3</Link>
+          <Link to="radio">Radio 4</Link>
         </div>
       </section>
     </div>
