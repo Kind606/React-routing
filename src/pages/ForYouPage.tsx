@@ -1,25 +1,16 @@
 import { Link } from "react-router";
 import ArtistCard from "../components/ArtistCard";
+import { mockedArtrist } from "../data";
 
 export default function ForYouPage() {
   return (
     <div>
-      <section>
-        <h2 className="text-2xl">Populare Artists</h2>
+      <h2 className="text-2xl">Populare Artists</h2>
+      <section className="overflow-auto">
         <div className="flex gap-2">
-          <ArtistCard
-            titel="Lady Gaga"
-            imageUrl="https://i.scdn.co/image/ab67616100005174aadc18cac8d48124357c38e6"
-          />
-          <ArtistCard
-            titel="The Weekend"
-            imageUrl="https://i.scdn.co/image/ab676161000051749e528993a2820267b97f6aae"
-          />
-          <ArtistCard
-            titel="Mirain Bryant"
-            imageUrl="https://i.scdn.co/image/ab676161000051747994b16479f2784ee5511662"
-          />
-          
+          {mockedArtrist.map((artist) => (
+            <ArtistCard titel={artist.name} imageUrl={artist.imageUrl} />
+          ))}
         </div>
       </section>
       <section>
